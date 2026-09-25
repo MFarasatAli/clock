@@ -1,13 +1,13 @@
 function updateClock() {
 
-    const now = new Date();
+    var now = new Date();
 
-    let hours = now.getHours();
-    let minutes = now.getMinutes();
-    let seconds = now.getSeconds();
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+    var seconds = now.getSeconds();
 
     // ampm
-    let ampm;
+    var ampm;
 
     if (hours >= 12) {
         ampm = "PM";
@@ -34,7 +34,7 @@ function updateClock() {
         seconds = "0" + seconds;
     }
 
-    const days = [
+    var days = [
         "Sunday",
         "Monday",
         "Tuesday",
@@ -44,7 +44,7 @@ function updateClock() {
         "Saturday"
     ];
 
-    const months = [
+    var months = [
         "January",
         "February",
         "March",
@@ -59,10 +59,10 @@ function updateClock() {
         "December"
     ];
 
-    const day = days[now.getDay()];
-    const date = now.getDate();
-    const month = months[now.getMonth()];
-    const year = now.getFullYear();
+    var day = days[now.getDay()];
+    var date = now.getDate();
+    var month = months[now.getMonth()];
+    var year = now.getFullYear();
    
    
     document.getElementById("time").textContent = hours + ':' + minutes + ':' + seconds + ' ' + ampm;
